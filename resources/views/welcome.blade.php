@@ -237,7 +237,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="filtr-container w3layouts agileits">
 
-                <div class="filtr-item w3layouts agileits portfolio-t" data-category="1, 5" data-sort="Busy streets">
+                <div class="filtr-item w3layouts agileits portfolio-t" data-category="1" data-sort="Busy streets">
                     <a href="images/p1.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p1.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -248,7 +248,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="2, 5" data-sort="Luminous night">
+                <div class="filtr-item w3layouts agileits" data-category="2" data-sort="Luminous night">
                     <a href="images/p2.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p2.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -259,7 +259,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="1, 4" data-sort="City wonders">
+                <div class="filtr-item w3layouts agileits" data-category="3" data-sort="City wonders">
                     <a href="images/p3.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p3.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -270,7 +270,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="3" data-sort="In production">
+                <div class="filtr-item w3layouts agileits" data-category="4" data-sort="In production">
                     <a href="images/p4.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p4.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -281,7 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="3, 4" data-sort="Industrial site">
+                <div class="filtr-item w3layouts agileits" data-category="5" data-sort="Industrial site">
                     <a href="images/p5.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p5.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -292,7 +292,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Peaceful lake">
+                <div class="filtr-item w3layouts agileits" data-category="1, 3" data-sort="Peaceful lake">
                     <a href="images/p6.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p6.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -303,7 +303,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="1, 5" data-sort="City lights">
+                <div class="filtr-item w3layouts agileits" data-category="2, 5" data-sort="City lights">
                     <a href="images/p7.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p7.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -314,7 +314,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Dreamhouse">
+                <div class="filtr-item w3layouts agileits" data-category="3, 4" data-sort="Dreamhouse">
                     <a href="images/p8.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p8.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -325,7 +325,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="2, 4" data-sort="Dreamhouse">
+                <div class="filtr-item w3layouts agileits" data-category="4, 4" data-sort="Dreamhouse">
                     <a href="images/p1.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p1.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -340,6 +340,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //portfolio -->
+
+
     <!-- modal -->
     <div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -524,48 +526,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //team -->
-    <!-- blog -->
-    <div id="blog" class="blog">
-        <div class="container"> 
-            <div class="agileits-title">
-                <h3>Our Blog</h3>
-            </div> 
-            <div class="wthree-blog-grids">
-                <div class="col-md-6 w3-agileits-blog-grid">
-                    <div class="col-sm-4 col-xs-3 blog-left">
-                        <h4>24/01</h4>
-                        <ul>
-                            <li>Posted : <a href="#">Admin</a></li>
-                            <li>Likes : 31<li>
-                            <li>Comments : (4)</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-8 col-xs-9 blog-right">
-                        <a href="#" data-toggle="modal" data-target="#myModal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet luctus gravida.</a>
-                        <p>Sed ut feugiat felis. Morbi tempor ut nibh id consectetur. Morbi turpis arcu, interdum at feugiat non, iaculis id dui. Cras vestibulum dapibus volutpat. Fusce id molestie mauris, nec pulvinar nibh. </p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="col-md-6 w3-agileits-blog-grid">
-                    <div class="col-sm-4 col-xs-3 blog-left">
-                        <h4>09/12</h4>
-                        <ul>
-                            <li>Posted : <a href="#">Admin</a></li>
-                            <li>Likes : 80<li>
-                            <li>Comments : (8)</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-8 col-xs-9 blog-right">
-                        <a href="#" data-toggle="modal" data-target="#myModal">Etiam ut nibh quis magna placerat euismod ac id eros. Cras eleifend nulla vel eros blandit.</a>
-                        <p>Duis sodales eleifend laoreet. Vestibulum luctus venenatis massa, in vulputate mi porta ac. Maecenas sollicitudin eros lectus, a rutrum nisi vulputate quis. Proin tempus, lectus vitae gravida</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-    </div>
-    <!-- //blog -->
+    
     <!-- mail -->
     <div class="mail" id="mail">
         <div class="container">
@@ -635,63 +596,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             })();
         </script>
     <!-- //mail -->
-    <!-- contact -->
-    <div id="contact" class="contact">
-        <div class="contact-row agileits-w3layouts">  
-            <div class="col-md-5 contact-w3lsleft map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.948805392833!2d-73.99619098458929!3d40.71914347933105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1479793484055"></iframe>
-            </div>
-            <div class="col-md-7 contact-w3lsright">
-                <h6>Sed interdum interdum accumsan nec purus ac orci finibus facilisis sapien Sed interdum . </h6>
-                <div class="col-xs-6 address-row">
-                    <div class="col-xs-2 address-left">
-                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-10 address-right">
-                        <h5>Visit Us</h5>
-                        <p>Broome St, Canada, <br>NY 10002, New York </p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="col-xs-6 address-row w3-agileits">
-                    <div class="col-xs-2 address-left">
-                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-10 address-right">
-                        <h5>Mail Us</h5>
-                        <p><a href="mailto:info@example.com"> mail@example1.com </a></p>
-                        <p><a href="mailto:info@example.com"> mail@example2.com</a></p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="col-xs-6 address-row">
-                    <div class="col-xs-2 address-left">
-                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-10 address-right">
-                        <h5>Call Us</h5>
-                        <p>+01 222 333 4444<br></p>
-                        <p>+01 222 333 5555</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div> 
-                <div class="col-xs-6 address-row">
-                    <div class="col-xs-2 address-left">
-                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-10 address-right">
-                        <h5>Working Hours</h5>
-                        <p>Mon - Fri : 8:00 am to 10:30 pm<br>
-                        Sat - Sun : 9:00 am to 11:30 pm</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="clearfix"> </div>   
-            </div>
-            <div class="clearfix"> </div>
-        </div>  
-    </div>
-    <!-- //contact -->  
+    
     <!-- footer -->
     <div class="footer">
         <div class="container">
