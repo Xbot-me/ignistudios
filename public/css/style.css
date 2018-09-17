@@ -19,11 +19,11 @@ body{
 	background:#FFFFFF;
 }
 .banner{
-	background: url(../images/1.jpg) no-repeat 0px 0px;
+	/*background: url(../images/1.jpg) no-repeat 0px 0px;*/
     background-size: cover;
 }
 .agileinfo-dot{
-    background: url(../images/dott.png)repeat 0px 0px;
+    /*background: url(../images/dott.png)repeat 0px 0px;*/
     background-size: 2px;
     -webkit-background-size: 2px;
     -moz-background-size: 2px;
@@ -86,18 +86,17 @@ body{
     float: none;
 }
 .navbar-nav li:after {
-    content: "";
     position: absolute;
     background: #FFFFFF;
     height: 7px;
     width: 7px;
     top: 16px;
     left: 0;
-    border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-ms-border-radius: 50%;
-	-o-border-radius: 50%;
-	-moz-border-radius: 50%;
+    border-radius: 25%;
+	-webkit-border-radius: 25%;
+	-ms-border-radius: 25%;
+	-o-border-radius: 25%;
+	-moz-border-radius: 25%;
 }
 .navbar-nav li.active:after {
     background: none !important;
@@ -369,7 +368,7 @@ body{
     margin: 4em 0 0 0;
 }
 .w3about-img {
-    background: url(../images/2.jpg)no-repeat 0px 0px;
+    /*background: url(../images/2.jpg)no-repeat 0px 0px;*/
     background-size: cover;
     min-height: 30em;
     padding: 0;

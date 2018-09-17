@@ -7,23 +7,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Games Hub a Games Category Bootstrap responsive Website Template | Home :: w3layouts</title>
+<title>Igni Studios</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <meta name="keywords" content="Games Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link rel="icon" 
+      type="image/png" 
+      href="{{ asset('images/igni.png') }}">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 @include('includes/styles')
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <![endif]-->
+<style>
+    .no-dot {
+        list-style: none !important;
+    }
+</style>
 </head>
 <body>
     <!-- banner -->
-    <div class="banner">
+    
+
+    <div class="banner" style="background: url(storage/{{ setting('site.banner_image') ?: '' }}) no-repeat 0px 0px;background-size: cover;">
         <div class="agileinfo-dot">
             <div class="agileits-logo">
-                <h1><a href="index.html">Games <span>Hub</span></a></h1>
+                <h1><a href="/">Igni <span>Studios</span></a></h1>
+                <!-- <h1><a href="/"><img src="{{ asset('images/igni.png') }}" style="width: 100px;"></a></h1> -->
             </div>
             <div class="header-top">
                 <div class="container">
@@ -42,13 +53,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                                 <nav>
-                                    <ul class="nav navbar-nav">
-                                        <li class="active"><a href="index.html">Home</a></li>
-                                        <li><a href="#about" class="scroll">About</a></li>
-                                        <li><a href="#gallery" class="scroll">Latest Games</a></li>
-                                        <li><a href="#team" class="scroll">Team</a></li>
-                                        <li><a href="#blog" class="scroll">Blog</a></li>
-                                        <li><a href="#mail" class="scroll">Mail Us</a></li>
+                                    <ul class="nav navbar-nav no-do">
+                                        <li class="active no-dot"><a href="/">Home</a></li>
+                                        <li class="no-dot"><a href="#about" class="scroll">About Us</a></li>
+                                        <li class="no-dot"><a href="#gallery" class="scroll">Our Games</a></li>
+                                        <li class="no-dot"><a href="#team" class="scroll">Team</a></li>
+                                        <li class="no-dot"><a href="#mail" class="scroll">Mail Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -125,10 +135,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
             <div class="about-w3lsrow"> 
-                <div class="col-md-7 col-sm-7 w3about-img"> 
+                <div class="col-md-7 col-sm-7 w3about-img" style="background: url(storage/{{ setting('site.about_us_image') ?: '' }})no-repeat 0px 0px;"> 
                     <div class="w3about-text"> 
-                        <h5 class="w3l-subtitle">- About Us</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at placerat ante. Praesent nulla nunc, pretium dapibus efficitur in, auctor eget elit. Lorem ipsum dolor sit amet</p>
+                        <h5 class="w3l-subtitle"> About Us</h5>
+                        <p>{{ setting('site.about_us') ?: '' }}</p>
                     </div>
                 </div> 
                 <div class="clearfix"> </div>
@@ -228,27 +238,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <ul class="simplefilter w3layouts agileits">
                 <li class="active w3layouts agileits" data-filter="all">All</li>
-                <li class="w3layouts agileits" data-filter="1">Category1</li>
-                <li class="w3layouts agileits" data-filter="2">Category2</li>
+                @foreach($games as $game)
+                    <li class="w3layouts agileits" data-filter="{{ $game->id }}">{{ $game->name }}</li>
+                @endforeach
+<!--                 <li class="w3layouts agileits" data-filter="2">Category2</li>
                 <li class="w3layouts agileits" data-filter="3">Category3</li>
                 <li class="w3layouts agileits" data-filter="4">Category4</li>
                 <li class="w3layouts agileits" data-filter="5">Category5</li>
-            </ul>
+ -->            </ul>
 
             <div class="filtr-container w3layouts agileits">
-
-                <div class="filtr-item w3layouts agileits portfolio-t" data-category="1" data-sort="Busy streets">
-                    <a href="images/p1.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
+                
+                @foreach($gameData as $gameDatum)
+                    <div class="filtr-item w3layouts agileits portfolio-t" data-category="{{ $gameDatum['id'] }}" data-sort="Busy streets">
+                    <a href="{{ asset('storage/' . $gameDatum['image']) }}" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
-                            <img src="images/p1.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
+                            <img src="{{ asset('storage/' . $gameDatum['image']) }}" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
                             <figcaption>
                                 <h3>Games <span>Hub</span></h3>
                             </figcaption>
                         </figure>
                     </a>
                 </div>
+                @endforeach
+                
 
-                <div class="filtr-item w3layouts agileits" data-category="2" data-sort="Luminous night">
+                <!-- <div class="filtr-item w3layouts agileits" data-category="2" data-sort="Luminous night">
                     <a href="images/p2.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p2.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -292,7 +307,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="1, 3" data-sort="Peaceful lake">
+                <div class="filtr-item w3layouts agileits" data-category="1" data-sort="Peaceful lake">
                     <a href="images/p6.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p6.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -303,7 +318,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="2, 5" data-sort="City lights">
+                <div class="filtr-item w3layouts agileits" data-category="2" data-sort="City lights">
                     <a href="images/p7.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p7.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -314,7 +329,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="3, 4" data-sort="Dreamhouse">
+                <div class="filtr-item w3layouts agileits" data-category="3" data-sort="Dreamhouse">
                     <a href="images/p8.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p8.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -325,7 +340,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </div>
 
-                <div class="filtr-item w3layouts agileits" data-category="4, 4" data-sort="Dreamhouse">
+                <div class="filtr-item w3layouts agileits" data-category="4" data-sort="Dreamhouse">
                     <a href="images/p1.jpg" class="b-link-stripe w3layouts agileits b-animate-go thickbox">
                         <figure>
                             <img src="images/p1.jpg" class="img-responsive w3layouts agileits" alt="W3layouts Agileits">
@@ -334,7 +349,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </figcaption>
                         </figure>
                     </a>
-                </div>
+                </div> -->
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -360,104 +375,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //modal -->
-    <!-- testimonial -->
-    <div class="jarallax testimonial" id="testimonial">
-        <div class="testimonial-dot">
-            <div class="container">
-                <div class="agileits-title testimonial-heading"> 
-                    <h3>Testimonial</h3> 
-                </div>
-                <div class="w3-agile-testimonial">
-                    <div class="slider">
-                        <div class="callbacks_container">
-                            <ul class="rslides callbacks callbacks1" id="slider3">
-                                <li>
-                                    <div class="testimonial-img-grid">
-                                        <div class="testimonial-img t-img1">
-                                            <img src="images/ts1.jpg" alt="" />
-                                        </div>
-                                        <div class="testimonial-img">
-                                            <img src="images/ts2.jpg" alt="" />
-                                        </div>
-                                        <div class="testimonial-img t-img2">
-                                            <img src="images/ts3.jpg" alt="" />
-                                        </div>
-                                        <div class="clearfix"> </div>
-                                    </div>
-                                    <div class="testimonial-img-info">
-                                        <p>Nunc interdum elit nec sapien vehicula, ut blandit nulla ultrices. Sed ullamcorper metus eget efficitur rutrum. Aliquam a nunc odio. Aenean fermentum finibus efficitur.</p>
-                                        <h5>Peter Guptill</h5>
-                                        <h6>Proin blandit</h6>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="testimonial-img-grid">
-                                        <div class="testimonial-img t-img1">
-                                            <img src="images/ts2.jpg" alt="" />
-                                        </div>
-                                        <div class="testimonial-img">
-                                            <img src="images/ts3.jpg" alt="" />
-                                        </div>
-                                        <div class="testimonial-img t-img2">
-                                            <img src="images/ts1.jpg" alt="" />
-                                        </div>
-                                        <div class="clearfix"> </div>
-                                    </div>
-                                    <div class="testimonial-img-info">
-                                        <p>Morbi est est, mollis id diam a, pellentesque dignissim lorem. Sed malesuada sed lacus sit amet vestibulum. Sed nibh purus, egestas eu orci vel, mollis interdum orci.</p>
-                                        <h5>Mary Jane</h5>
-                                        <h6>Lorem ipsum</h6>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="testimonial-img-grid">
-                                        <div class="testimonial-img t-img1">
-                                            <img src="images/ts3.jpg" alt="" />
-                                        </div>
-                                        <div class="testimonial-img">
-                                            <img src="images/ts1.jpg" alt="" />
-                                        </div>
-                                        <div class="testimonial-img t-img2">
-                                            <img src="images/ts2.jpg" alt="" />
-                                        </div>
-                                        <div class="clearfix"> </div>
-                                    </div>
-                                    <div class="testimonial-img-info">
-                                        <p>Proin blandit rhoncus metus porta tristique. Praesent suscipit in erat a tempor. Nullam tempor lectus ex, a auctor orci ultricies ac. Mauris sapien neque, condimentum sit</p>
-                                        <h5>Steven Wilson</h5>
-                                        <h6>Proin blandit</h6>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="clearfix"> </div>
-                        <script>
-                                    // You can also use "$(window).load(function() {"
-                                    $(function () {
-                                      // Slideshow 4
-                                      $("#slider3").responsiveSlides({
-                                        auto: true,
-                                        pager:false,
-                                        nav:false,
-                                        speed: 500,
-                                        namespace: "callbacks",
-                                        before: function () {
-                                          $('.events').append("<li>before event fired.</li>");
-                                        },
-                                        after: function () {
-                                          $('.events').append("<li>after event fired.</li>");
-                                        }
-                                      });
-                                
-                                    });
-                        </script>
-                        <!--banner Slider starts Here-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //testimonial -->
+    
     <!-- team -->
     <div class="team" id="team">
         <div class="container">
@@ -605,7 +523,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="footer-title">
                         <h3>About Us</h3>
                     </div> 
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                    <p>{{ setting('site.about_us') ?: '' }}</p>
                 </div>
                 <div class="col-md-4 amet-sed amet-medium">
                     <div class="footer-title">
