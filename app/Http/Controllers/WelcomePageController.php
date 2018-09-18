@@ -25,13 +25,8 @@ class WelcomePageController extends Controller
 				$data['name'] = $game->name;
 				array_push($gameData, $data);
 			}
-			// print_r($x) ; "<br>";
 		}
-		// foreach($gameData as $img) {
-		// 	print_r($img['id']);
-		// 	echo "<br>";
-		//  // gameId 1
-		// }
+		
 
 		return view('welcome')->with(['games' => $games,'gameData' => $gameData]);
 	}

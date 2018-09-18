@@ -24,6 +24,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     .no-dot {
         list-style: none !important;
     }
+    .callbacks_tabs .callbacks1_tabs {
+        display: none !important;
+    }
 </style>
 </head>
 <body>
@@ -78,18 +81,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="banner_text">
                                                 <h3>Lorem ipsum</h3>
                                                 <p>In volutpat metus quis velit malesuada</p>
-                                                <div class="w3-button">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
-                                                </div>
+                                                
                                             </div>
                                         </li>
                                         <li>
                                             <div class="banner_text">
                                                 <h3>Nam semper</h3>
                                                 <p>Nam imperdiet tellus nec enim tempus</p>
-                                                <div class="w3-button">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
-                                                </div>
+                                                
                                             </div>
                                         </li>
                                     </ul>
