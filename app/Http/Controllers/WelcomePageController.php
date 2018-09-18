@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Game;
+use App\Member;
+use App\BannerText;
 
 class WelcomePageController extends Controller
 {
@@ -23,11 +25,15 @@ class WelcomePageController extends Controller
 				$data['id'] = $game->id;
 				$data['image'] = $y;
 				$data['name'] = $game->name;
+				$data['link'] = $game->download_link;
 				array_push($gameData, $data);
 			}
 		}
 		
+		$members = Member::all();
 
-		return view('welcome')->with(['games' => $games,'gameData' => $gameData]);
+		$bannerTexts = BannerText::all();
+
+		return view('welcome')->with(['games' => $games,'gameData' => $gameData,'members' => $members,'bannerTexts' => $bannerTexts]);
 	}
 }
